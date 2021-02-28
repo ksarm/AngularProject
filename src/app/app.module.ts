@@ -13,7 +13,10 @@ import {
   EventRouteActivator,
   CreateSessionComponent,
   SessionListComponent,
-  DurationPipe
+  UpVoteComponent,
+  VoterService,
+  DurationPipe,
+  LocationValidator
 } from './events/index'
 
 import { EventsAppComponent } from './events-app.component'
@@ -48,6 +51,8 @@ let jQuery = window['$'];
     CollapsibleWellComponent,
     DurationPipe,
     SimpleModalComponent,
+    UpVoteComponent,
+    LocationValidator,
     ModalTriggerDirective
   ],
   imports: [
@@ -62,6 +67,7 @@ let jQuery = window['$'];
     { provide: JQ_TOKEN, useValue: jQuery },
     EventRouteActivator,
     EventListResolver,
+    VoterService,
     AuthService,
     {
       provide: 'canDeactivateCreateEvent',
